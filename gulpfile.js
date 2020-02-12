@@ -15,10 +15,10 @@
 
   function images() {
     return gulp
-      .src('src/images/*')
+      .src('src/images/**/*')
       .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 70, progressive: true}),
+        imagemin.mozjpeg({quality: 75, progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
         imagemin.svgo({
           plugins: [
